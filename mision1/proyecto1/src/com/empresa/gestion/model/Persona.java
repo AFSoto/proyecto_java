@@ -18,4 +18,16 @@ public class Persona {
     public void setNombre(String nombre){
         this.nombre = nombre;
     }
+
+    public int getEdad(){
+        return edad;
+    }
+
+    public void setEdad(int edad){
+        this.edad = edad;
+    }
+
+    public void presentarse(){
+        System.out.println("hola soy"+nombre+"y tengo "+edad+" años");
+    }
 }
