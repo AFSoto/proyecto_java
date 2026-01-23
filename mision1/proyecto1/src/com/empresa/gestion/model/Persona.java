@@ -4,7 +4,7 @@ public class Persona {
     // encapsulacion
     private String nombre;
     private int edad;
-    private boolean activo;// tru - false
+    protected boolean activo;// tru - false
     private char genero; // 'M' - 'F'
 
     //constructor
