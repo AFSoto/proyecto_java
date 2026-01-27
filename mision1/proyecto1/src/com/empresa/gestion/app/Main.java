@@ -9,6 +9,8 @@ public class Main {
         Gerente gerente1 = new Gerente("Ana", 61,true,'F', 8000,160, "Ventas",2000);
         empleado1.presentarse();
         gerente1.presentarse();
+
+
         NominaService nomina = new NominaService();
 
 
@@ -27,8 +29,13 @@ public class Main {
         System.out.println("tipo empleado: "+ gerente1.obtenerTipoEmpleado());
         
 
-
         // Persona persona1 = new Persona('andres',23, true, 'M');
         // persona1.presentarse();
+
+        double [] salarios = {2000,1000,5000};
+        System.out.println("calcular total nomina:"+nomina.calcularTotalNomina(salarios));
+
+        short meses = 3;
+        nomina.simularPagos(meses);
     }
 }
