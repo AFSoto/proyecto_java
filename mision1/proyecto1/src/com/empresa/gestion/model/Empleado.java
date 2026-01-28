@@ -3,11 +3,16 @@ package com.empresa.gestion.model;
 public class Empleado extends Persona {
     private double salario;
     private int horasTrabajadas;
+    
 
-    public Empleado(String nombre,int edad,boolean activo,char genero,double salario,int horasTrabajadas){
-        super(nombre,edad, activo, genero);
+    
+
+
+    public Empleado(String nombre,int edad,boolean activo,char genero,double salario,int horasTrabajadas,int id){
+        super(nombre,edad, activo, genero,id);
         this.salario = salario;
         this.horasTrabajadas = horasTrabajadas;
+        
     }
 
     
@@ -68,6 +73,12 @@ public class Empleado extends Persona {
             default:
                 return "no especificado";
         }
+    }
+
+    public String resumen(){
+        return "ID: "+id+
+                "nombre: "+nombre+
+                "edad: "+edad;
     }
 
 

@@ -2,18 +2,25 @@ package com.empresa.gestion.model;
 
 public class Persona {
     // encapsulacion
-    private String nombre;
+    protected String nombre;
     protected int edad;
     protected boolean activo;// tru - false
     protected char genero; // 'M' - 'F'
+    protected int id;
 
     //constructor
-    public Persona(String nombre , int edad,boolean activo,char genero){
+    public Persona(String nombre , int edad,boolean activo,char genero,int id){
         this.nombre = nombre;
         this.edad = edad;
         this.activo = activo;
         this.genero = genero;
+        this.id = id;
     }
+
+    public int getId() {
+        return id;
+    }
+
 
     public String getNombre(){
         return nombre;
