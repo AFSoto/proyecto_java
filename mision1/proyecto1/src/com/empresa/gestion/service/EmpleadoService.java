@@ -32,4 +32,15 @@ public class EmpleadoService {
         }
         System.out.println("empleado no encontrado");
     }
+
+    //consultar 
+    public void consultarEmpleado(int id){
+        for(Empleado e :empleados){
+            if (e.getId() == id) {
+                System.out.println(e.resumen());
+                return;
+            }
+        }
+        System.out.println("empleado no encontrado");
+    }
 }

@@ -76,9 +76,13 @@ public class Empleado extends Persona {
     }
 
     public String resumen(){
-        return "ID: "+id+
-                "nombre: "+nombre+
-                "edad: "+edad;
+        return "| ID: "+id+
+                "| nombre: "+nombre+
+                "| edad: "+edad+
+                "| genero: "+genero+
+                "| activo: "+activo+
+                "| salario: "+salario+
+                "| horas trabajadas: "+horasTrabajadas+"\n";
     }
 
 
