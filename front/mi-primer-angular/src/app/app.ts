@@ -11,6 +11,8 @@ export class App {
 
   protected readonly title = signal('mi-primer-angular');
   users: any[] = [];
+  // ! para que se usa esta archivo ? 
+  pokemons:any[] = [];
   // detectChange() {
   //   this.chp.detectChanges();
   // }

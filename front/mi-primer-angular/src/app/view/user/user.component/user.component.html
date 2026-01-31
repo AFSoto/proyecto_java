@@ -2,9 +2,22 @@
 <pre>{{ users | json }}</pre> -->
 
 
+<div class="row">
 
+@for(u of users; track u.id){
+<div class="card" style="width: 18rem;" >
+  <div class="card-body">
+    <h5 class="card-title">{{ u.id }}</h5>
+    <h6 class="card-subtitle mb-2 text-body-secondary">{{ u.name }}</h6>
+    <p class="card-text">{{ u.email }}</p>
+    <!-- <a href="#" class="card-link">Card link</a>
+    <a href="#" class="card-link">Another link</a> -->
+  </div>
+</div>
+}
+</div>
 
-<div><button class="btn btn-primary mb-4">boton con botstrap</button></div>
+<!-- <div><button class="btn btn-primary mb-4">boton con botstrap</button></div>
 <div><button>boton sin bootstrap</button></div>
 
 
@@ -18,4 +31,4 @@
   @for (u of users ; track u.id){
     <li>{{ u.name }} - {{ u.email }}</li>
   }
-</ul>
+</ul> -->
