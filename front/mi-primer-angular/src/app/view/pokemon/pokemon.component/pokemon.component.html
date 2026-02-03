@@ -2,7 +2,7 @@
 
 <div class="container">
   <div class="row">
-@for(p of pokemons; track p.id){
+@for(p of pokemons; track p.name){
 
 <div class="card" style="width: 18rem;">
 
@@ -10,9 +10,7 @@
     <h5 class="card-title">{{p.name}}</h5>
   </div>
 
-  <div class="card-body">
-    <a href="{{p.url}}" class="card-link">Buscar pokemon</a>
-  </div>
+  <img [src]="getPokemonImage(p.url)"   class="img-thumbnail" alt="p.name">
 </div>
 }
 </div>

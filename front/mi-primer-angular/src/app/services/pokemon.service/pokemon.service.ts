@@ -5,7 +5,7 @@ export interface PokemonResponse{
   count:number;
   next:string | null;
   previous:string;
-  result: PokemonInterface[]
+  results: PokemonInterface[]
 }
 
 export interface PokemonInterface{
