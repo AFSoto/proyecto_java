@@ -1,4 +1,4 @@
-package com.talentotech.energia;
+package com.dev.energia;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

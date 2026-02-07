@@ -1,4 +1,4 @@
-package com.talentotech.energia;
+package com.dev.energia;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
