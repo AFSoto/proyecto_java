@@ -1,5 +1,6 @@
 package com.dev.energia.model;
 import java.lang.annotation.Inherited;
+import java.time.LocalDateTime;
 
 import javax.annotation.processing.Generated;
 
@@ -13,8 +14,22 @@ public class User {
     private Long id;
     @Column(nullable =false,unique = true)
     private String username;
-    @Column(nullable = false)
+    @Column(nullable = false,unique = true)
     private String email;
+    @Column(nullable = true)
+    private String password;
+    @Column(nullable = true)
+    @Enumerated(EnumType.STRING)
+    private Role role;
+    @CreationTimestamp
+    @Column(name = "created_at", nullable = false, updatable = false)
+    private LocalDateTime createdAt;
+    @UpdateTimestamp
+    @Column(name = "update_at")
+    private LocalDateTime updateAt;
+
+
+
     public User(){}
        public Long getId() {
         return id;
