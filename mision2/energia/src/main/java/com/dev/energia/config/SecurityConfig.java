@@ -12,21 +12,25 @@ import org.springframework.security.web.SecurityFilterChain;
 @EnableMethodSecurity
 public class SecurityConfig {
     @Bean
-    public PasswordEncoder passwordEncoder(){
+    public PasswordEncoder passwordEncoder() {
         return new BCryptPasswordEncoder();
     }
+
     @Bean
-    public SecurityFilterChain filterChain(HttpSecurity http) throws Exception{
+    public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
         http
-        .csrf(csrf -> csrf.disable()) // si no se desactiva falla POST/PUT/DELETE
-        .authorizeHttpRequests(auth -> auth
-        .requestMatchers("/api/users").permitAll()
-        .requestMatchers("/api/users/{id}").permitAll()
-        .requestMatchers("/api/users/login").permitAll()
-        .anyRequest().authenticated())
-        .formLogin(form -> form.disable())
-        .httpBasic(basic -> basic.disable());
-        return http.build(); 
+                .csrf(csrf -> csrf.disable()) // si no se desactiva falla POST/PUT/DELETE
+                .authorizeHttpRequests(auth -> auth
+                        .requestMatchers("/api/users").permitAll()
+                        .requestMatchers("/api/users/{id}").permitAll()
+                        .requestMatchers("/api/users/login").permitAll()
+                        .requestMatchers("/api/country").permitAll()
+                        .requestMatchers("/api/region").permitAll()
+                        .requestMatchers("/api/company").permitAll()
+                        .anyRequest().authenticated())
+                .formLogin(form -> form.disable())
+                .httpBasic(basic -> basic.disable());
+        return http.build();
     }
-    
+
 }

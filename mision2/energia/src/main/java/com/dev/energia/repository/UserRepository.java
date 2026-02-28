@@ -40,4 +40,7 @@ public interface UserRepository extends JpaRepository<User, Long> {
      *   - Optional.empty()     → si no existe ningún usuario con ese username
      */
     Optional<User> findByUsername(String username);
+
+
+    
 }

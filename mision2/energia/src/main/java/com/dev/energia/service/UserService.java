@@ -64,7 +64,7 @@ public class UserService {
 
         // Busca el usuario; si no existe lanza una excepción en lugar de retornar null
         User user = userRepository.findById(id)
-                .orElseThrow(() -> new RuntimeException("Usuario no encontrado"));
+                .orElseThrow(() -> new ResourceNotFoundException("Usuario no encontrado"));
 
         // Solo actualiza el username si viene con un valor no vacío
         if (userDetails.getUsername() != null && !userDetails.getUsername().trim().isEmpty()) {
@@ -103,7 +103,7 @@ public class UserService {
 
         // Si no existe, lanza excepción
         if (optionalUser.isEmpty()) {
-            throw new RuntimeException("Usuario no encontrado");
+            throw new ResourceNotFoundException("Usuario no encontrado");
         }
 
         User user = optionalUser.get(); // extrae el usuario del Optional
