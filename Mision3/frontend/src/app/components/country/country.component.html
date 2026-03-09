@@ -1,0 +1,11 @@
+<h1>Countries</h1>
+
+<input type="text" [(ngModel)]="newCountry.name" placeholder="Country name">
+
+<button (click)="saveCountry()">guardar</button>
+
+<ul>
+  <li *ngFor="let c of countries">
+    {{c.name}}
+  </li>
+</ul>

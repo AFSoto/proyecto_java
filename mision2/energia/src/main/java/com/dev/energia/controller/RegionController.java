@@ -6,7 +6,8 @@ import com.dev.energia.service.RegionService;
 import com.dev.energia.model.Region;
 
 import java.util.List;
-
+import org.springframework.web.bind.annotation.CrossOrigin;
+@CrossOrigin(origins = "http://localhost:4200")
 @RestController
 @RequestMapping("/api/region")
 @RequiredArgsConstructor
